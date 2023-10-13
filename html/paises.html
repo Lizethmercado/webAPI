@@ -7,25 +7,32 @@
     <title>Ejemplo API JS</title>
     <script src="../js/consumirapipaises.js"></script>
     <script src="../js/utilidades.js"></script>
+
+    <script>
+        function llamarMostrarPais() {
+
+            var selectPaises = document.getElementById("selectPaises")
+            mostrarDatosPaisSeleccionado(selectPaises.value);
+            
+        }
+    </script>
 </head>
 
 <body>
 
     <h1>Paises</h1>
 
-    <table id="tablaPaises">
-        <tr>
-            <th>Nombre oficial</th>
-            <th>Capital</th>
-            <th>Region</th>
-        </tr>
-    </table>
+   
 
-    <script>
-
-        poblarDatosPaises();
-
-    </script>
+   <button onclick="poblarDatosPaises()"> Poblar datos paises</button>
+   <select id="selectPaises" onchange="llamarMostrarPais()"></select>
+   <table id="tablaPaises">
+    <tr>
+        <th>Nombre oficial</th>
+        <th>Capital</th>
+        <th>Region</th>
+    </tr>
+</table>
 
 </body>
 
